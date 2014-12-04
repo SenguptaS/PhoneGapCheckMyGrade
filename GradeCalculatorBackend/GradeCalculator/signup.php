@@ -11,7 +11,7 @@ try
 		$result = DB::insert('users',array
 				(
 						'user_email' => $_POST['user_email'],
-						'user_first_name' =>$_POST['user_first_name'], 
+						'user_first_name' =>$_POST['user_first_name'],
 						'user_last_name' => $_POST['user_last_name'],
 						'user_phone_number' => $_POST['user_phone_number'],
 						'user_student_id' =>  $_POST['use_student_id'],
@@ -20,20 +20,20 @@ try
 						'user_access_token' => null,
 						'user_type' => 1));
 			
-		
+
 		$opt = new OutputGenerator(true);
 		$opt->Output();
-		return;	
+		return;
 	}
 	else
 	{
-		throw Exception('User already exists');
+		throw new Exception('User already exists');
 	}
-	
+
 }
 catch(Exception $ex)
 {
 	$opt = new OutputGenerator(false,$ex->getMessage());
 	$opt->Output();
-	return; 
+	return;
 }

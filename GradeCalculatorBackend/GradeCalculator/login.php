@@ -4,7 +4,7 @@ require_once 'output_generator.php';
 
 try
 {
-	$result = DB::queryFirstRow('SELECT * FROM users where user_email=%s',$_POST['email']);
+	$result = DB::queryFirstRow('SELECT * FROM users where user_email=%s',$_POST['user_email']);
 
 	if($result == null)
 	{
@@ -13,13 +13,14 @@ try
 	}
 	else
 	{
-		if($result['user_password'] == sha1($_POST['password']))
+		if($result['user_password'] == sha1($_POST['user_password']))
 		{
 			$opt = new OutputGenerator(true);
-			$opt->AddOutputAssoc($opt);
+			$opt->AddOutputAssoc($result);
 			$opt->Output();
 			return;
 		}
+		
 		throw new Exception('Password incorrect');
 	}
 

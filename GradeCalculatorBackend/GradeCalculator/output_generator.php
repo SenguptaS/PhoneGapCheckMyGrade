@@ -18,24 +18,25 @@ class OutputGenerator
 		$this->data[$key] = $value;
 	}
 
-	function AddOutputAssoc(array $assoc_array)
+	function AddOutputAssoc($assoc_array)
 	{
-		$this->data = array_merge($this->data,$assoc_array);
+		 $this->data = array_merge_recursive($this->data,(array) $assoc_array); 
 	}
 
 	function Output($return = false)
 	{
 		$this->data['success'] = $this->isSuccess;
 			
-		if(!$this->isSuccess)
+		if($this->isSuccess === false)
 		{
 			$this->data['error_message'] = $this->errmsg;
 		}
 			
 		if($return)
 		{
-			return json_encode($data,true,3);
+			return json_encode($this->$data,true,3);
 		}
-		echo json_encode($this->data,true,3);
+		
+		echo json_encode($this->data);
 	}
 }

@@ -4,7 +4,7 @@ require_once 'output_generator.php';
 
 try
 {
-	$result = DB::queryFirstRow('SELECT * FROM users where user_email=%s',$_POST['email']);
+	$result = DB::queryFirstRow('SELECT * FROM users where user_email=%s',$_POST['user_email']);
 
 	if($result == null)
 	{
@@ -14,7 +14,7 @@ try
 						'user_first_name' =>$_POST['user_first_name'],
 						'user_last_name' => $_POST['user_last_name'],
 						'user_phone_number' => $_POST['user_phone_number'],
-						'user_student_id' =>  $_POST['use_student_id'],
+						'user_student_id' =>  $_POST['user_student_id'],
 						'user_password' => sha1( $_POST['user_password'] ),
 						'user_profile_pic' => null,
 						'user_access_token' => null,

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1">
+            <meta charset="utf-8">
+                <title>Grader</title>
+                <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+				<link rel="stylesheet" type="text/css" href="css/index.css">
+                <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+                <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+                <script src="js/index.js"></script>
+	</head>
+    <body>
+	
+        <div data-role="page" id="studcomputegrade">
+            <div data-role="header" data-position="fixed">
+                <h1>Grader</h1>
+            </div>
+            <div data-role="content">
+               <form method="post" action="http://prashanthragh.com.gradeCalculator/XXX.php"> 
+				<p style="text-align: center;">
+					<label for="class_num" class="select">Class # </label>
+					<select name="class_num" id="select_class_num">
+					   <option value="CMPE235">CMPE235</option>
+					   <option value="CMPE239">CMPE239</option>
+					   <option value="CMPE277">CMPE277</option>
+					   <option value="CMPE297">CMPE297</option>
+					</select>
+				</p>
+				
+				<p style="text-align: center;">
+					<label for="homework">Homework</label> 
+					<input type="number" name="homework" data-clear-btn="false">
+				</p>
+				
+				<p style="text-align: center;">
+					<label for="labwork">Lab work</label> 
+					<input type="number" name="labwork" data-clear-btn="false">
+				</p>
+				
+				<p style="text-align: center;">
+					<label for="project">Project</label> 
+					<input type="number" name="project" data-clear-btn="false">
+				</p>
+				
+				<p style="text-align: center;">
+					<label for="presentation">Presentation</label> 
+					<input type="number" name="presentation" data-clear-btn="false">
+				</p>
+				
+				<p style="text-align: center;">
+					<label for="midterm">Midterm</label> 
+					<input type="number" name="midterm" data-clear-btn="false">
+				</p>
+				
+				<p style="text-align: center;">
+					<label for="final">Final</label> 
+					<input type="number" name="final" data-clear-btn="false">
+				</p>
+				
+                <p style="text-align: center;">
+					<button class="ui-btn ui-btn-b" id="compute_grade">Compute Grade</button>	
+				</p>
+				
+                <p style="text-align: center;">
+					<label for="garde">Grade - TBD</label>
+				</p>
+			</form>
+				
+            </div>
+			<div data-role="footer" data-position="fixed">
+				<h6>All rights reserved!</h6>
+			</div>
+        </div>
+			<script type="text/javascript" src="js/cordova.js"></script>
+			<script src="js/index.js"></script>
+	</body>
+</html>

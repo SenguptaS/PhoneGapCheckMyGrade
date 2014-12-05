@@ -11,6 +11,7 @@ class OutputGenerator
 		$this->isSuccess = $success;
 		$this->errmsg = $error_message;
 		$this->data = array();
+		
 	}
 
 	function AddOutput($key,$value)
@@ -20,7 +21,14 @@ class OutputGenerator
 
 	function AddOutputAssoc($assoc_array)
 	{
-		 $this->data = array_merge_recursive($this->data,(array) $assoc_array); 
+		if(isset($this->data['data']))
+		{
+		 $this->data['data'] = array_merge_recursive((array)$this->data['data'],(array) $assoc_array);
+		}
+		else
+		{
+			$this->data['data'] = $assoc_array;
+		} 
 	}
 
 	function Output($return = false)
@@ -30,6 +38,14 @@ class OutputGenerator
 		if($this->isSuccess === false)
 		{
 			$this->data['error_message'] = $this->errmsg;
+		}
+		
+		if(isset($this->data['data']))
+		{
+			if(count($this->data['data']) <=0 )
+			{
+				unset($this->data['data']);
+			}
 		}
 			
 		if($return)

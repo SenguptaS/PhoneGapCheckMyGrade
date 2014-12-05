@@ -70,6 +70,29 @@ CREATE TABLE `scaling` (
   PRIMARY KEY (`user_email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+/*Table structure for table `user_classes_binding` */
+
+CREATE TABLE `user_classes_binding` (
+  `binding_number` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_email` varchar(64) NOT NULL,
+  `user_class_number` varchar(64) NOT NULL,
+  PRIMARY KEY (`binding_number`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+/*Table structure for table `user_marks` */
+
+CREATE TABLE `user_marks` (
+  `user_email` varchar(64) NOT NULL,
+  `user_class_number` varchar(64) NOT NULL,
+  `user_homework_marks` float unsigned NOT NULL DEFAULT '0',
+  `user_labs_marks` float unsigned NOT NULL DEFAULT '0',
+  `user_project_marks` float unsigned NOT NULL DEFAULT '0',
+  `user_presentation_marks` float unsigned NOT NULL DEFAULT '0',
+  `user_midterm_marks` float unsigned NOT NULL DEFAULT '0',
+  `user_final_marks` float unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`user_email`,`user_class_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 /*Table structure for table `users` */
 
 CREATE TABLE `users` (
@@ -84,7 +107,7 @@ CREATE TABLE `users` (
   `user_access_token` varchar(512) DEFAULT NULL,
   `user_type` tinyint(3) unsigned NOT NULL DEFAULT '1',
   PRIMARY KEY (`user_number`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;

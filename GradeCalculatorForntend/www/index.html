@@ -42,7 +42,6 @@
                 <h1>Grader</h1>
             </div>
             <div data-role="content">
-			   <form method="post" action="http://prashanthragh.com.gradeCalculator/XXX.php">
                 <p style="text-align: center;">
 					<button class="ui-btn ui-btn-b" id="profile_info">Profile Info</button>	
 				</p>
@@ -58,7 +57,6 @@
                 <p style="text-align: center;">
 					<button class="ui-btn ui-btn-b" id="speed_grader">Speed Grader</button>	
 				</p>
-			</form>
             </div>
 			<div data-role="footer" data-position="fixed">
 				<h6>All rights reserved!</h6>
@@ -70,34 +68,38 @@
                 <h1>Grader</h1>
             </div>
             <div data-role="content">
-              <form method="post" action="http://prashanthragh.com.gradeCalculator/XXX.php">
+              <form method="post">
 				<p style="text-align: center;">
 					<label for="user_id">ID#</label> 
-					<input type="number" name="user_id" data-clear-btn="false">
+					<input type="number" id="user_id" data-clear-btn="false">
 				</p>
 				
 				<p style="text-align: center;">
 					<label for="fname">First Name:</label> 
-					<input type="text" name="fname" data-clear-btn="false">
+					<input type="text" id="fname" data-clear-btn="false">
 				</p>
 				
 				<p style="text-align: center;">
 					<label for="lname">Last Name:</label> 
-					<input type="text" name="lname" data-clear-btn="false">
+					<input type="text" id="lname" data-clear-btn="false">
 				</p>
 				
 				<p style="text-align: center;">
 					<label for="email">Email:</label> 
-					<input type="email" name="email" data-clear-btn="false">
+					<input type="email" id="email" data-clear-btn="false">
 				</p>
 				
 				<p style="text-align: center;">
 					<label for="phone">Phone:</label> 
-					<input type="number" name="phone" data-clear-btn="false">
+					<input type="number" id="phone" data-clear-btn="false">
 				</p>
 				
                 <p style="text-align: center;">
 					<button class="ui-btn ui-btn-b" id="update">Update</button>	
+				</p>
+				
+                <p style="text-align: center;">
+					<button class="ui-btn ui-btn-b" id="back_profilepage">Back</button>	
 				</p>
                 
 			</form>
@@ -166,25 +168,14 @@
             <div data-role="header" data-position="fixed">
                 <h1>Grader</h1>
             </div>
-            <div data-role="content">
-              <form method="post" action="http://prashanthragh.com.gradeCalculator/XXX.php">
-                <p style="text-align: center;">
-					<button class="ui-btn ui-btn-b" id="course#1">CMPE 2XX1</button>	
-				</p>
-				
-                <p style="text-align: center;">
-					<button class="ui-btn ui-btn-b" id="course#2">CMPE 2XX2</button>	
-				</p>
-				
-                <p style="text-align: center;">
-					<button class="ui-btn ui-btn-b" id="course#3">CMPE 2XX3</button>	
-				</p>
-				
-                <p style="text-align: center;">
-					<button class="ui-btn ui-btn-b" id="course#4">CMPE 2XX4</button>	
-				</p>
-			</form>
+            <div data-role="content" id="courselistcontent">
+               
             </div>
+            <div data-role="content">
+	            <p style="text-align: center;">
+					<button class="ui-btn ui-btn-b" id="back_courselist">Back</button>	
+				</p>
+			</div>
 			<div data-role="footer" data-position="fixed">
 				<h6>All rights reserved!</h6>
 			</div>
@@ -195,7 +186,7 @@
                 <h1>Grader</h1>
             </div>
             <div data-role="content">
-               <form method="post" action="http://prashanthragh.com.gradeCalculator/XXX.php">
+               <form method="post">
 				<p style="text-align: center;">
 					<label for="class_num">Class #</label> 
 				</p>
@@ -258,63 +249,67 @@
 				<h6>All rights reserved!</h6>
 			</div>
         </div>
-        <!-- Student grade Compute -->
-        <div data-role="page" id="studcomputegrade">
-            <div data-role="header" data-position="fixed">
-                <h1>Grader</h1>
-            </div>
-            <div data-role="content">
-               <form method="post" action="http://prashanthragh.com.gradeCalculator/XXX.php"> 
-				<p style="text-align: center;">
-					<label for="class_num" class="select">Class # </label>
-					<select name="class_num" id="select_class_num">
-					   <option value="CMPE235">CMPE235</option>
-					   <option value="CMPE239">CMPE239</option>
-					   <option value="CMPE277">CMPE277</option>
-					   <option value="CMPE297">CMPE297</option>
-					</select>
-				</p>
+	    <!-- Student grade Compute -->
+	           <div data-role="page" id="studcomputegrade">
+	               <div data-role="header" data-position="fixed">
+	                   <h1>Grader</h1>
+	               </div>
+	               <div data-role="content">
+	                  <form method="post" id="studGradeForm"> 
+	   				<p style="text-align: center;">
+	   					<label for="class_num" class="select">Class # </label>
+	   					<select name="class_number" id="class_number">
+	   					   <option value="CMPE235">CMPE235</option>
+	   					   <option value="CMPE239">CMPE239</option>
+	   					   <option value="CMPE277">CMPE277</option>
+	   					   <option value="CMPE297">CMPE297</option>
+	   					</select>
+	   				</p>
 				
-				<p style="text-align: center;">
-					<label for="homework">Homework</label> 
-					<input type="number" name="homework" data-clear-btn="false">
-				</p>
+	   				<p style="text-align: center;">
+	   					<label for="homework">Homework</label>
+	   <input type="range" name="marks_homework" id="marks_homework" value="60" min="0" max="500" data-highlight="true" step = "5" />
+	   				</p>
 				
-				<p style="text-align: center;">
-					<label for="labwork">Lab work</label> 
-					<input type="number" name="labwork" data-clear-btn="false">
-				</p>
+	   				<p style="text-align: center;">
+	   					<label for="labwork">Lab work</label>
+	   <input type="range" name="marks_lab" id="marks_lab" value="60" min="0" max="500" data-highlight="true" step = "5" />
+	   				</p>
 				
-				<p style="text-align: center;">
-					<label for="project">Project</label> 
-					<input type="number" name="project" data-clear-btn="false">
-				</p>
+	   				<p style="text-align: center;">
+	   					<label for="project">Project</label>
+	   <input type="range" name="markes_project" id="markes_project" value="60" min="0" max="200" data-highlight="true" step = "5" />
+	   				</p>
 				
-				<p style="text-align: center;">
-					<label for="presentation">Presentation</label> 
-					<input type="number" name="presentation" data-clear-btn="false">
-				</p>
+	   				<p style="text-align: center;">
+	   					<label for="presentation">Presentation</label>
+	   <input type="range" name="marks_presentation" id="marks_presentation" value="5" min="0" max="10" data-highlight="true" step = "1" />
+	   				</p>
 				
-				<p style="text-align: center;">
-					<label for="midterm">Midterm</label> 
-					<input type="number" name="midterm" data-clear-btn="false">
-				</p>
+	   				<p style="text-align: center;">
+	   					<label for="midterm">Midterm</label>
+	   <input type="range" name="marks_midterm" id="marks_midterm" value="50" min="0" max="100" data-highlight="true" step = "1" />
+	   				</p>
 				
-				<p style="text-align: center;">
-					<label for="final">Final</label> 
-					<input type="number" name="final" data-clear-btn="false">
-				</p>
+	   				<p style="text-align: center;">
+	   					<label for="final">Final</label>
+	   <input type="range" name="marks_final" id="marks_final" value="50" min="0" max="100" data-highlight="true" step = "1" />
+	   				</p>
 				
-                <p style="text-align: center;">
-					<button class="ui-btn ui-btn-b" id="compute_grade">Compute Grade</button>	
-				</p>
+	                   <p style="text-align: center;">
+	   					<button class="ui-btn ui-btn-b" id="stud_compute_grade">Compute Grade</button>	
+	   				</p>
 				
-                <p style="text-align: center;">
-					<label for="garde">Grade - TBD</label>
-				</p>
-			</form>
-				
-            </div>
+	                   <p style="text-align: center;">
+	   					<label id="stud_lgarde">Grade - TBD</label>
+	   				</p>
+					
+	                <p style="text-align: center;">
+						<button class="ui-btn ui-btn-b" id="back_studgrader">Back</button>	
+					</p>
+					
+	   			</form>
+	           </div>
 			<div data-role="footer" data-position="fixed">
 				<h6>All rights reserved!</h6>
 			</div>
@@ -326,7 +321,7 @@
                 <h1>Grader</h1>
             </div>
             <div data-role="content">
-               <form method="post" action="http://prashanthragh.com.gradeCalculator/XXX.php">
+               <form method="post">
 				<p style="text-align: center;">
 					<label for="student_id" class="select">Student # </label>
 					<select name="student_id" id="select_student_id">

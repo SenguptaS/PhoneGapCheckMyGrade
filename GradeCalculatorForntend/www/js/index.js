@@ -99,7 +99,7 @@
 	  {
 	  	$.mobile.changePage("#studcomputegrade");
 	  }
-	  else if($.grV.user.user_type == 0)
+	  else
 	  {
 	  	$.mobile.changePage("#profcomputegrade");
 	  }
@@ -118,6 +118,29 @@
 			if(obj.success)
 				{
 					$('#stud_lgarde').html("<h2>Grade: " + obj.grade + "</h2>");
+	  			}
+			else
+				{
+					toast(obj.error_message);
+				}
+		}
+		,
+		null
+	 );
+	return false;
+  };
+  
+  var profComputeGrade = function()
+  {
+	
+	$('#profGradeForm').append('<input type="hidden" name="user_email" value='+ $.grV.user.user_email +'>');  
+	submitAjaxForm("#profGradeForm","compute_grade.php",
+		function(data,status)
+		{
+			var obj = JSON.parse(data);
+			if(obj.success)
+				{
+					$('#prof_lgarde').html("<h2>Grade: " + obj.grade + "</h2>");
 	  			}
 			else
 				{
@@ -176,12 +199,24 @@
     	$('#profile_info').on('click', loadProfile);
 		$('#speed_grader').on('click', launchGrader);
 		$('#stud_compute_grade').on('click', studComputeGrade);
+		$('#prof_compute_grade').on('click', profComputeGrade);
 		$('#course_list').on('click', laodCourseList);
 		
-		$('#back_profilepage').on('click', function(){$.mobile.changePage("#homepage"); return false;})
-		$('#back_courselist').on('click', function(){$.mobile.changePage("#homepage"); return false;})
-		$('#back_studgrader').on('click', function(){$.mobile.changePage("#homepage"); return false;})
+		$('#cancel_Signup').on('click', function(){$.mobile.changePage("#index"); return false;});
+		$('#back_profilepage').on('click', function(){$.mobile.changePage("#homepage"); return false;});
+		$('#back_courselist').on('click', function(){$.mobile.changePage("#homepage"); return false;});
+		$('#back_studgrader').on('click', function(){$.mobile.changePage("#homepage"); return false;});
+		$('#back_profgrader').on('click', function(){$.mobile.changePage("#homepage"); return false;});
+		$('#btn_config').on('click', function(){$.mobile.changePage("#settingpage"); return false;});
+		$('#btnMaxPoints').on('click', function(){$.mobile.changePage("#maximumpoints"); return false;});
+		$('#btnScalingFactor').on('click', function(){$.mobile.changePage("#scalingfactor"); return false;});
+		$('#btnScoringRubic').on('click', function(){$.mobile.changePage("#gradeconfig"); return false;});
+		$('#btn_cancel_settings').on('click', function(){$.mobile.changePage("#homepage"); return false;});
 		
+		$('#backGradeConfig').on('click', function(){$.mobile.changePage("#settingpage"); return false;});
+		$('#backScalingFactor').on('click', function(){$.mobile.changePage("#settingpage"); return false;});
+		$('#backMaxPoint').on('click', function(){$.mobile.changePage("#settingpage"); return false;});		
+			
 	});
 
 	// Load plugin

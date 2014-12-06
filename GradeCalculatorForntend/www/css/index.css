@@ -1,4 +1,4 @@
-
+/*
 body {
     background: url(../images/bg.jpg);
     background-repeat:repeat-y;
@@ -11,4 +11,10 @@ body {
 }
 .ui-content{
     background: transparent;
+}
+*/
+
+.ui-page
+{
+	background:  #01AEEF;
 }

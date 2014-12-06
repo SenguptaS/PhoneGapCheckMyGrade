@@ -1,0 +1,1084 @@
+body {
+	padding: 0;
+	margin: 0;
+	font-size: 62.5%;
+}
+
+
+.button-holder {
+	background: #68CBFA;
+	float: left;
+	width: 100%;
+}
+
+.white {
+	background: white;
+}
+
+.button-holder > div > div, .button-holder > div > a {
+	float: left;
+	display: block;
+	width: 120px;
+	height: 52px;
+	font-size: 2em;	
+	padding: 10px 30px;
+	margin: 80px;
+	position: relative;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-family: 'adelle-sans', sans-serif;
+}
+
+.center-content {
+	width: 840px;
+	margin: 0px auto;
+}
+
+.button-holder div a {
+	text-decoration: none;
+	color: rgba(0,0,0,0.7);
+}
+/* ================================================================ */
+/* BUTTON TYPE 1 STARTS HERE -------------------------------------- */
+/* ================================================================ */
+
+.type-1 {
+	background: #096894;
+}
+
+.type-1 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	top: 0;
+	opacity: 1;
+	left: 0;
+	box-sizing: border-box;
+	background: #096894;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	text-align: center;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+.type-1 span:last-of-type {
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+	transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+	background: #aaa;
+}
+
+.type-1:hover span:last-of-type {
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	background: #fff;
+	
+}
+
+.type-1:hover span:first-of-type {
+	background: #073f58;
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 2 STARTS HERE -------------------------------------- */
+/* ================================================================ */
+
+.type-2 {
+	background: #096894;
+}
+
+.type-2 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	top: 0;
+	opacity: 1;
+	left: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	text-align: center;
+}
+
+.type-2 span:nth-of-type(2), .type-2 span:nth-of-type(3) {
+	-webkit-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+	transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+	background: #aaa;
+	clip: rect(0, 60px, 9999px, 0);
+}
+
+.type-2 span:nth-of-type(3) { 
+	transform-origin: 100% 100%;
+	-webkit-transform-origin: 100% 100%;
+	-webkit-transform: rotateY(90deg);
+	transform: rotateY(90deg);
+	clip: rect(0, 9999px, 9999px, 60px);
+}
+
+.type-2:hover span:nth-of-type(2), .type-2:hover span:nth-of-type(3) {
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+	background: #fff;
+}
+
+.type-2:hover span:nth-of-type(2), .type-2:hover span:nth-of-type(3) {
+	-webkit-transform: rotateY(0);
+	transform: rotateY(0);
+	background: #fff;
+}
+
+.type-2:hover span:first-of-type {
+	background: #073f58;
+}
+
+.type-2 span:last-of-type {
+	opacity: 0;
+	background: white;
+	-webkit-transition: none;
+	transition: none;
+}
+
+.type-2:hover span:last-of-type {
+	opacity: 1;
+	-webkit-transition: all 0.05s linear 0.3s;
+	transition: all 0.05s linear 0.3s;
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 3 STARTS HERE -------------------------------------- */
+/* ================================================================ */
+
+
+.type-3 {
+	-webkit-transition: -webkit-transform 0.3s linear, background 0.3s linear 0.3s;
+	transition: transform 0.3s linear, background 0.3s linear 0.3s;
+	background: #096894;
+}
+
+.type-3 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	top: 0;
+	opacity: 1;
+	left: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	-webkit-transition: all 0.3s linear 0.3s;
+	transition: all 0.3s linear 0.3s;
+	text-align: center;
+}
+
+.type-3:hover {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+	background: #096894;
+}
+
+.type-3 span:nth-of-type(2), .type-3 span:nth-of-type(3) {
+	background: white;
+	clip: rect(0px, 9999px, 26px, 0px);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.type-3 span:nth-of-type(3) {
+	clip: rect(26px, 9999px, 52px, 0px);
+	-webkit-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+.type-3:hover span:nth-of-type(2), .type-3:hover span:nth-of-type(3) {
+	-webkit-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	background: #bbb;
+}
+/* ================================================================ */
+/* BUTTON TYPE 4 STARTS HERE -------------------------------------- */
+/* ================================================================ */
+
+.type-4 {
+	background: #096894;
+}
+
+.type-4 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	top: 0;
+	opacity: 1;
+	left: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	-webkit-transition: all 0.3s linear 0.3s;
+	transition: all 0.3s linear 0.3s;
+	text-align: center;
+	background: #aaa;
+	z-index: 99999;
+	-webkit-transition: none;
+	transition: none;
+}
+
+.type-4 span:first-of-type {
+	clip: rect(0px,9999px,13px,0px);
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	opacity: 0;
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+}
+
+.type-4 span:nth-of-type(2) {
+	clip: rect(13px,9999px,26px,0px);
+	-webkit-transform-origin: 0 13px;
+	transform-origin: 0 13px;
+	opacity: 0;
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+}
+
+.type-4 span:nth-of-type(3) {
+	clip: rect(26px,9999px,39px,0px);
+	-webkit-transform-origin: 0 26px;
+	transform-origin: 0 26px;
+	opacity: 0;
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+}
+
+.type-4 span:nth-of-type(4) {
+	clip: rect(39px,9999px,52px,0px);
+	-webkit-transform-origin: 0 39px;
+	transform-origin: 0 39px;
+	opacity: 0;
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+}
+
+.type-4:hover span:nth-of-type(1) { 
+	-webkit-transition: -webkit-transform 0.2s linear 0s, opacity 0s linear 0s, background 0.2s linear 0s;
+	transition: transform 0.2s linear 0s, opacity 0.05s linear 0s, background 0.2s linear 0s;
+}
+
+.type-4:hover span:nth-of-type(2) { 
+	-webkit-transition: -webkit-transform 0.2s linear 0.2s, opacity 0s linear 0.2s, background 0.2s linear 0.2s;
+	transition: transform 0.2s linear 0.2s, opacity 0.05s linear 0.2s, background 0.2s linear 0.2s;
+}
+
+.type-4:hover span:nth-of-type(3) { 
+	-webkit-transition: -webkit-transform 0.2s linear 0.4s, opacity 0s linear 0.4s, background 0.2s linear 0.4s;
+	transition: transform 0.2s linear 0.4s, opacity 0.05s linear 0.4s, background 0.2s linear 0.4s;
+}
+
+.type-4:hover span:nth-of-type(4) {
+	-webkit-transition: -webkit-transform 0.2s linear 0.6s, opacity 0s linear 0.6s, background 0.2s linear 0.6s;
+	transition: transform 0.2s linear 0.6s, opacity 0.05s linear 0.6s, background 0.2s linear 0.6s;
+}
+
+.type-4:hover span {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	background: white;
+}
+
+.type-4 span:nth-of-type(5) {
+	-webkit-transform: none;
+	transform: none;
+	background: #096894;
+	z-index: 999;
+}
+
+.type-4:hover span:nth-of-type(5) {
+	-webkit-transform: none;
+	transform: none;
+	background: #094866;
+	-webkit-transition: background 0.2s linear 0.6s;
+	transition: background 0.2s linear 0.6s;
+	z-index: 999;
+}
+
+.type-4 span:last-of-type {
+	opacity: 0;
+	background: white;
+	-webkit-transition: none;
+	transition: none;
+}
+
+.type-4:hover span:last-of-type {
+	opacity: 1;
+	-webkit-transition: all 0.05s linear 0.8s;
+	transition: all 0.05s linear 0.8s;
+}
+
+
+/* ================================================================ */
+/* BUTTON TYPE 5 STARTS HERE -------------------------------------- */
+/* ================================================================ */
+
+.type-5 {
+	background: white;
+	overflow: hidden;
+}
+
+.type-5 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	text-align: center;
+	background: none;
+	z-index: 99999;
+	top: 100px;
+}
+
+.type-5 span:after {
+	content: '';
+	background: #096894;
+	width: 20px;
+	height: 14px;
+	border-radius: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+}
+
+.type-5 span:nth-of-type(1) {
+	background: #096894;
+	top: 106px;
+}
+
+.type-5 span:nth-of-type(2n+2) {
+	z-index: 9999999;
+	padding: 15px;
+	overflow: hidden;
+	top: 106px;
+}
+
+.type-5 span:nth-of-type(1):after { left: 0; top: -4px; background: #096894; }
+.type-5 span:nth-of-type(2):after { top: -8px; left: 20px; background: #fff; }
+.type-5 span:nth-of-type(3):after { top: 2px; left: 40px; }
+.type-5 span:nth-of-type(4):after { top: -8px; left: 60px; background: #fff; }
+.type-5 span:nth-of-type(5):after { top: 2px; left: 80px; }
+.type-5 span:nth-of-type(6):after { top: -8px; left: 100px; background: #fff; }
+.type-5 span:nth-of-type(7):after { top: 2px; left: 120px; }
+.type-5 span:nth-of-type(8):after { background: transparent; }
+
+.type-5 span:nth-of-type(8) { top: 0; background: #fff; z-index: 9999; padding: 11px; }
+
+.type-5:hover span:nth-of-type(2n+2) {
+	z-index: 9999999;
+	padding: 15px;
+	top: -10px;
+}
+
+.type-5:hover span:nth-of-type(2n+1) {
+	z-index: 9999999;
+	padding: 15px;
+	top: -18px;
+}
+
+.type-5:hover span:nth-of-type(8) {
+	z-index: 9999;
+	top: 0;
+	padding: 11px;
+}
+
+.type-5 span:nth-of-type(1) {
+	height: 100px;
+}
+
+.type-5:hover span:nth-of-type(1) {
+	z-index: 999999;
+	top: -10px;
+	height: 100px;
+	padding: 9px 0;
+}
+
+.type-5:hover span:nth-of-type(7) {
+	padding: 29px 0;
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 6 STARTS HERE -------------------------------------- */
+/* ================================================================ */
+
+.type-6 {
+	background: white;
+	overflow: hidden;
+}
+
+.type-6 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	text-align: center;
+	background: none;
+	z-index: 99999;
+	top: 100px;
+}
+
+.type-6 > span:last-of-type {
+	top: 0;
+}
+
+.type-6 > span {
+	position: absolute;
+	left: 0;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+.type-6 span span:after {
+	content: '';
+	background: #096894;
+	width: 20px;
+	height: 14px;
+	border-radius: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+}
+
+.type-6 span span:nth-of-type(1) {
+	background: #096894;
+	top: 100px;
+	height: 150px;
+	width: 134px;
+	z-index: 1;
+	position: relative;
+}
+
+.type-6 span span:nth-of-type(2n+2) {
+	z-index: 999999999;
+	padding: 15px;
+	overflow: hidden;
+	top: 106px;
+}
+
+.type-6 span span:nth-of-type(1):after { left: 0; top: -4px; background: #096894; }
+.type-6 span span:nth-of-type(2):after { top: -8px; left: 19px; background: #fff; }
+.type-6 span span:nth-of-type(3):after { top: 2px; left: 38px; }
+.type-6 span span:nth-of-type(4):after { top: -8px; left: 57px; background: #fff; }
+.type-6 span span:nth-of-type(5):after { top: 2px; left: 76px; }
+.type-6 span span:nth-of-type(6):after { top: -8px; left: 95px; background: #fff; }
+.type-6 span span:nth-of-type(7):after { top: 2px; left: 114px; }
+.type-6 span span:nth-of-type(8):after { background: transparent; }
+
+.type-6 span span:nth-of-type(8) { top: 0; background: #fff; z-index: 9999; padding: 11px; }
+
+.type-6 > span:first-of-type {
+	top: -11px;
+	left: -32px;
+	-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+
+.type-6:hover > span:first-of-type {
+	top: -128px;
+	left: 113px;;	
+	-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+
+
+/* ================================================================ */
+/* BUTTON TYPE 7 STARTS HERE -------------------------------------- */
+/* ================================================================ */
+
+.type-7 {
+	background: white;
+	overflow: hidden;
+}
+
+.type-7 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	text-align: center;
+	background: none;
+	z-index: 99999;
+}
+
+.type-7 span:first-of-type {
+	height: 0;
+	background: #096894;
+	padding: 0;
+	margin: 0;
+	top: 26px;
+}
+
+.type-7:hover span:first-of-type {
+	height: 40px;
+	top: 6px;
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 8 STARTS HERE -------------------------------------- */
+/* ================================================================ */
+
+.type-8 {
+	background: white;
+	overflow: hidden;
+}
+
+.type-8 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	text-align: center;
+	background: none;
+	z-index: 99999;
+}
+
+.type-8 span span {
+	background: #096894;
+	-webkit-transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg);
+}
+
+.type-8 span span:first-of-type {
+	width: 300px;
+	height: 15px;
+	top: -20px;
+	left: -65px;
+}
+.type-8 span span:nth-of-type(2) {
+	width: 100px;
+	height: 25px;
+	background: #0a4564;
+	top: -20px;
+	left: -24px;
+}
+.type-8 span span:nth-of-type(3) {
+	width: 200px;
+	height: 20px;
+	top: -20px;
+	left: -41px;
+}
+
+.type-8 span span:nth-of-type(4) {
+	width: 200px;
+	height: 30px;
+	background: #1b5877;
+	left: -11px;
+}
+
+.type-8 span span:nth-of-type(5) {
+	width: 200px;
+	height: 50px;
+	left: 3px;
+	top: 32px;
+}
+
+.type-8 > span:last-of-type {
+	z-index: 99999999;
+	background: transparent;
+}
+.type-8 > span:first-of-type {
+	top: 172px;
+	left: -244px;
+	position: relative;
+	-webkit-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+	z-index: 9999999;
+}
+
+
+.type-8:hover > span:first-of-type {
+	top: -11px;
+	left: -30px;
+	position: relative;
+}
+
+.type-8:hover span span {
+	background: #096894;
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 9 STARTS HERE -------------------------------------- */
+/* ================================================================ */
+
+.type-9, .type-9 a span {
+	-webkit-transition: -webkit-perspective 0.1s linear, -webkit-transform 0.1s linear, height 0s linear, top 0s linear;
+	transition: perspective 0.1s linear, transform 0.1s linear, height 0s linear, top 0s linear;
+}
+
+.type-9 { 
+	padding: 0 !important;
+}
+
+.type-9 > span {
+	-webkit-perspective: 100px;
+	perspective: 100px;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+} 
+
+
+.type-9 > span > span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	text-align: center;
+	background: #096894;
+	z-index: 99999;
+}
+
+.type-9:hover > span > span {
+	-webkit-transition: -webkit-transform 0.2s linear, height 0.1s linear, top 0s linear;
+	transition: transform 0.2s linear, height 0.1s linear, top 0s linear;
+}
+
+.type-9:hover span span:first-of-type {
+	-webkit-transform: rotateX(30deg);
+	transform: rotateX(30deg);
+	z-index: 999;
+
+}
+
+.type-9 > span > span:last-of-type {
+	-webkit-transform-origin: 100% 100%;
+	-webkit-transform: rotateX(90deg);
+	transform-origin: 100% 100%;
+	transform: rotateX(90deg);
+	z-index: 99;
+	height: 15px;	
+	background: #0a5376;
+	top: 33px;	
+}
+
+.type-9:hover span span:last-of-type {
+	-webkit-transform: rotateX(166deg) translateZ(-12px) translateY(6px);
+	transform: rotateX(166deg) translateZ(-12px) translateY(6px);
+}
+
+.type-9:active span:first-of-type span:first-of-type {
+	top: 5px;
+	-webkit-transition: none;
+	-webkit-transform: rotateX(30deg);
+	transform: rotateX(30deg);
+	transition: none;
+}
+
+.type-9:active span:first-of-type span:last-of-type {
+	top: 45px;
+	height: 10px;
+	padding: 6px;
+	-webkit-transition: none;
+	transition: none;
+	-webkit-transform: rotateX(166deg) translateZ(-12px) translateY(7px);
+	transform: rotateX(166deg) translateZ(-12px) translateY(7px);
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 10 STARTS HERE ------------------------------------- */
+/* ================================================================ */
+
+.type-10 {
+	padding: 0 !important;
+}
+.type-10 > span > span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.type-10 > span > span span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	text-align: center;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	background: #cc441a;
+	color: #582d1d;
+	-webkit-transition: -webkit-transform 0.3s linear, background 0.3s linear;
+	transition: transform 0.3s linear, background 0.3s linear;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+
+}
+
+.type-10:hover > span > span span:first-of-type {
+	background: #1a5470;
+}
+.type-10 > span > span span:nth-of-type(2) {
+	-webkit-transform: rotateX(-90deg) translateZ(52px);
+	transform: rotateX(-90deg) translateZ(52px);
+	background: #aaa;
+}
+
+.type-10:hover > span > span span:nth-of-type(2) {
+	background: #fff7f5;
+	color: #582d1d;
+}
+.type-10:hover > span > span {
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 11 STARTS HERE ------------------------------------- */
+/* ================================================================ */
+
+.type-11 {
+	padding: 0 !important;
+}
+.type-11 > span > span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	-webkit-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+}
+
+.type-11 > span > span span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	text-align: center;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	background: #cc441a;
+	color: #582d1d;
+	-webkit-transition: -webkit-transform 0.3s linear, background 0.3s linear;
+	transition: transform 0.3s linear, background 0.3s linear;
+	-webkit-transform-origin: 100% 100%;
+	transform-origin: 0 0;
+}
+
+.type-11:hover > span > span span:first-of-type {
+	background: #1a5470;
+}
+.type-11 > span > span span:nth-of-type(2) {
+	-webkit-transform: rotateY(90deg) translateZ(-120px);
+	transform: rotateY(90deg) translateX(-120px);
+	background: #AAA;
+	
+}
+
+.type-11:hover > span > span span:nth-of-type(2) {
+	background: #fff7f5;
+	color: #582d1d;
+}
+.type-11:hover > span > span {
+	-webkit-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 12 STARTS HERE ------------------------------------- */
+/* ================================================================ */
+
+.type-12 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	text-align: center;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	background: #cc441a;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+
+}
+.type-12 span:nth-of-type(1) {
+	z-index: 99999;
+}
+.type-12:hover span:nth-of-type(5) {
+	left: 40px;
+}
+
+.type-12 span:nth-of-type(2), 
+.type-12 span:nth-of-type(3),
+.type-12 span:nth-of-type(4) {
+	background: none;
+}
+.type-12 span:nth-of-type(2):after {
+	content: '';
+	position: absolute;
+	right: 0px;
+	top: 0;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 28px 0 0 28px;
+	border-color: transparent transparent transparent #cc441a;
+}
+
+.type-12 span:nth-of-type(3):after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 28px 28px 0 0;
+	border-color: #cc441a transparent transparent #cc441a;
+}
+
+.type-12 span:nth-of-type(4):after {	
+	content: '';
+	position: absolute;
+	width: 0px;
+	right: 0;
+	top: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 26px 0 26px 23px;
+	border-color: transparent transparent transparent #cc441a;
+}
+
+.type-12:hover span:nth-of-type(2) {
+	top: -28px;
+	left: 40px;
+}
+.type-12:hover span:nth-of-type(3) {
+	top: 28px;
+	left: 40px;
+}
+.type-12:hover span:nth-of-type(4) {
+	right: -23px;
+	left: 63px;
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 13 STARTS HERE ------------------------------------- */
+/* ================================================================ */
+
+.type-13 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	text-align: center;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	background: #cc441a;
+	color: #FFD7C8;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+	box-shadow: none;
+}
+
+.type-13:hover span {
+	box-shadow: rgb(240, 240, 240) 1px 1px, rgb(240, 240, 240) 2px 2px, rgb(240, 240, 240) 3px 3px, rgb(240, 240, 240) 4px 4px,
+				rgb(240, 240, 240) 5px 5px, rgb(240, 240, 240) 6px 6px, rgb(240, 240, 240) 7px 7px, rgb(240, 240, 240) 8px 8px,
+				rgb(240, 240, 240) 9px 9px, rgb(240, 240, 240) 10px 10px, rgb(240, 240, 240) 11px 11px, rgb(240, 240, 240) 12px 12px,
+				rgb(240, 240, 240) 13px 13px, rgb(240, 240, 240) 14px 14px, rgb(240, 240, 240) 15px 15px, rgb(240, 240, 240) 16px 16px,
+				rgb(240, 240, 240) 17px 17px, rgb(240, 240, 240) 18px 18px, rgb(240, 240, 240) 19px 19px, rgb(240, 240, 240) 20px 20px, 
+				rgb(240, 240, 240) 21px 21px, rgb(240, 240, 240) 22px 22px, rgb(240, 240, 240) 23px 23px, rgb(240, 240, 240) 24px 24px, 
+				rgb(240, 240, 240) 25px 25px, rgb(240, 240, 240) 26px 26px, rgb(240, 240, 240) 27px 27px, rgb(240, 240, 240) 28px 28px, 
+				rgb(240, 240, 240) 29px 29px, rgb(240, 240, 240) 30px 30px, rgb(240, 240, 240) 31px 31px, rgb(240, 240, 240) 32px 32px, 
+				rgb(240, 240, 240) 33px 33px, rgb(240, 240, 240) 34px 34px, rgb(240, 240, 240) 35px 35px, rgb(240, 240, 240) 36px 36px, 
+				rgb(240, 240, 240) 37px 37px, rgb(240, 240, 240) 38px 38px, rgb(240, 240, 240) 39px 39px, rgb(240, 240, 240) 40px 40px, 
+				rgb(240, 240, 240) 41px 41px, rgb(240, 240, 240) 42px 42px, rgb(240, 240, 240) 43px 43px, rgb(240, 240, 240) 44px 44px, 
+				rgb(240, 240, 240) 45px 45px, rgb(240, 240, 240) 46px 46px, rgb(240, 240, 240) 47px 47px, rgb(240, 240, 240) 48px 48px,  
+				rgb(240, 240, 240) 49px 49px, rgb(240, 240, 240) 50px 50px, rgb(240, 240, 240) 51px 51px, rgb(240, 240, 240) 52px 52px,
+				rgb(241, 241, 241) 53px 53px, rgb(241, 241, 241) 54px 54px, rgb(241, 241, 241) 55px 55px, rgb(241, 241, 241) 56px 56px,
+				rgb(241, 241, 241) 57px 57px, rgb(242, 242, 242) 58px 58px, rgb(242, 242, 242) 59px 59px, rgb(242, 242, 242) 60px 60px, 
+				rgb(242, 242, 242) 61px 61px, rgb(242, 242, 242) 62px 62px, rgb(243, 243, 243) 63px 63px, rgb(243, 243, 243) 64px 64px,
+				rgb(243, 243, 243) 65px 65px, rgb(243, 243, 243) 66px 66px, rgb(243, 243, 243) 67px 67px, rgb(244, 244, 244) 68px 68px, 
+				rgb(244, 244, 244) 69px 69px, rgb(244, 244, 244) 70px 70px, rgb(244, 244, 244) 71px 71px, rgb(245, 245, 245) 72px 72px, 
+				rgb(245, 245, 245) 73px 73px, rgb(245, 245, 245) 74px 74px, rgb(245, 245, 245) 75px 75px, rgb(245, 245, 245) 76px 76px, 
+				rgb(246, 246, 246) 77px 77px, rgb(246, 246, 246) 78px 78px, rgb(246, 246, 246) 79px 79px, rgb(246, 246, 246) 80px 80px,
+				rgb(246, 246, 246) 81px 81px, rgb(247, 247, 247) 82px 82px, rgb(247, 247, 247) 83px 83px, rgb(247, 247, 247) 84px 84px,
+				rgb(247, 247, 247) 85px 85px, rgb(247, 247, 247) 86px 86px, rgb(248, 248, 248) 87px 87px, rgb(248, 248, 248) 88px 88px,
+				rgb(248, 248, 248) 89px 89px, rgb(248, 248, 248) 90px 90px, rgb(248, 248, 248) 91px 91px, rgb(249, 249, 249) 92px 92px, 
+				rgb(249, 249, 249) 93px 93px, rgb(249, 249, 249) 94px 94px, rgb(249, 249, 249) 95px 95px, rgb(250, 250, 250) 96px 96px, 
+				rgb(250, 250, 250) 97px 97px, rgb(250, 250, 250) 98px 98px, rgb(250, 250, 250) 99px 99px, rgb(250, 250, 250) 100px 100px, 
+				rgb(251, 251, 251) 101px 101px, rgb(251, 251, 251) 102px 102px, rgb(251, 251, 251) 103px 103px, rgb(251, 251, 251) 104px 104px,
+				rgb(251, 251, 251) 105px 105px, rgb(252, 252, 252) 106px 106px, rgb(252, 252, 252) 107px 107px, rgb(252, 252, 252) 108px 108px, 
+				rgb(252, 252, 252) 109px 109px, rgb(252, 252, 252) 110px 110px, rgb(253, 253, 253) 111px 111px, rgb(253, 253, 253) 112px 112px,
+				rgb(253, 253, 253) 113px 113px, rgb(253, 253, 253) 114px 114px, rgb(253, 253, 253) 115px 115px, rgb(254, 254, 254) 116px 116px,
+				rgb(254, 254, 254) 117px 117px, rgb(254, 254, 254) 118px 118px, rgb(254, 254, 254) 119px 119px, rgb(255, 255, 255) 120px 120px;
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 14 STARTS HERE ------------------------------------- */
+/* ================================================================ */
+
+.type-14 {
+	overflow: hidden;
+}
+
+.type-14 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	text-align: center;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transition: all 0.6s cubic-bezier(0.05, 0.06, 0.05, 0.95);
+	transition: all 0.6s cubic-bezier(0.05, 0.06, 0.05, 0.95);
+	box-shadow: none;
+	background: #cc441a;
+	color: #FFD7C8;
+}
+
+.type-14 span span:nth-of-type(1) { top: 0px; background: #cc441a; }
+.type-14 span span:nth-of-type(2) { top: 52px; background: #bc421c; }
+.type-14 span span:nth-of-type(3) { top: 104px; background: #a73b1b; }
+.type-14 span span:nth-of-type(4) { top: 156px; background: #bc421c; }
+.type-14 span span:nth-of-type(5) { top: 208px; background: #c1421b; }
+.type-14 span span:nth-of-type(6) { top: 260px; background: #cc441a; }
+
+.type-14:hover > span {
+	top: -208px;
+	background: #2c81a8;
+}
+
+.type-14:hover {
+	box-shadow: inset 0px -24px 20px -20px rgba(0,0,0,0.6);
+}
+
+/* ================================================================ */
+/* BUTTON TYPE 15 STARTS HERE ------------------------------------- */
+/* ================================================================ */
+
+.type-15 {
+	overflow: hidden;
+	background: #fff7f5;
+}
+
+.type-15 span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: block;
+	opacity: 1;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 9px 0;
+	text-align: center;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	-webkit-transition: all 0.6s cubic-bezier(0.05, 0.06, 0.05, 0.95);
+	transition: all 0.6s cubic-bezier(0.05, 0.06, 0.05, 0.95);
+	box-shadow: none;
+	color: #582d1d;
+}
+
+.type-15 span:first-of-type {
+	z-index: 99999;
+}
+
+.type-15 span:last-of-type {
+	background: #cc441a;
+	left: -100%;
+}
+
+.type-15:hover span {
+	left: 0;
+}

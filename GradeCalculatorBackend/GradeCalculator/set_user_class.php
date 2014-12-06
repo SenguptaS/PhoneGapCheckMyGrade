@@ -18,7 +18,6 @@ try
 				$_POST['user_email'],
 				$_POST['class_number']
 				);
-		
 	}
 	
 	$opt = new OutputGenerator(true);

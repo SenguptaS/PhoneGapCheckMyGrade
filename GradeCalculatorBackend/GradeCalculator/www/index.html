@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <script src="js/app.js"></script>
+		<title>Check My Grade</title>
+    </head>
+    <body>
+  <div data-role="page" id="login_page">
+  <div data-role="header">
+    <h1>Login</h1>
+    <div id="notification" class="ui-error"></div>
+  </div>
+  <div role="main" class="ui-content">
+  <form id="login_form">
+      <label for="user_email" data-mini="true">Email:</label><input  id="user_email" name="user_email" type="text" value=""></input>
+	  <label for="user_password" data-mini="true">Password:</label><input id="user_password" name="user_password" type="password" value=""></input>
+	  <a href="#" id="do_login" data-role="button" data-icon="check">Login</a>
+  </form>
+  </div>
+</div>
+ <div data-role="page" id="main_page">
+    <h1 id='welcomeHeader'>Welcome User</h1>
+    <h2 id="phoneNumber"></h2>
+    <h2 id="email"></h2>
+    <h2 id="studentID"></h2>
+    <h2 id="phoneNumber"></h2>
+ </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+ 
+ <div data-role="popup" id="popupDiv" data-overlay-theme="a" data-theme="a" style="max-width:400px;" class="ui-corner-all ui-popup ui-body-a ui-overlay-shadow">
+			<div data-role="header" data-theme="a" class="ui-corner-top ui-header ui-bar-a" role="banner">
+				<h1 id="popupHeader" class="ui-title" role="heading" aria-level="1">Message</h1>
+			</div>
+			<div role="main" class="ui-corner-bottom ui-content">
+				<h3 id="popupMessage" class="ui-title">Message</h3>
+				<a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b" class="ui-link ui-btn ui-btn-b ui-btn-inline ui-shadow ui-corner-all" role="button">Ok</a>
+		</div>
+    </body>
+</html>

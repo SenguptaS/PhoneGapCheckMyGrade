@@ -6,9 +6,9 @@
                 <title>Grader</title>
                 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
 				<link rel="stylesheet" type="text/css" href="css/index.css">
-                <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+				<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
                 <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
-                <script src="js/index.js"></script>
+				<script src="js/index.js"></script>
 	</head>
     <body>
 	
@@ -17,16 +17,17 @@
                 <h1>Grader</h1>
             </div>
             <div data-role="content">
-                <form method="post" action="http://prashanthragh.com.gradeCalculator/login.php">
+                <form id="login_form">
                     <div data-role="fieldcontain">
                         <input type="email" name="user_email" id="user_email" data-clear-btn="true" value="" placeholder="Username" autocomplete="on">
 						<input type="password" name="user_password" id="user_password" data-clear-btn="true" value="" placeholder="Password" autocomplete="off">
                             </div>
                     <p style="text-align: center;">
-						<button class="ui-btn ui-btn-b" id="signin">Sign In</button>	
+						<a href="#" class="ui-icon-check ui-btn-b ui-btn-icon-right ui-btn ui-corner-all"  id="signin">Sign In</a>	
 					</p>
+					<div style="min-height: 12px;"></div>
                     <p style="text-align: center;">
-						<button class="ui-btn ui-btn-b" id="signup">Sign Up</button>	
+						<a href="#" id="signup" class="ui-mini ui-overlay-shadow" style="text-decoration: none;">Signup for CheckMyGrade</a>
 					</p>
                 </form>
             </div>
